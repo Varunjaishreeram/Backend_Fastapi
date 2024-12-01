@@ -58,6 +58,12 @@
     <div class="endpoint">
         <h3>2. Get All Students</h3>
         <p><strong>GET:</strong> <code>/students</code></p>
+        <p><strong>Filters:</strong></p>
+        <ul>
+            <li><strong>Filter by Country:</strong> <code>/students?country=USA</code></li>
+            <li><strong>Filter by Age:</strong> <code>/students?age=25</code></li>
+            <li><strong>Filter by Country and Age:</strong> <code>/students?country=USA&age=25</code></li>
+        </ul>
         <p><strong>Example Response:</strong></p>
         <pre>
 {
@@ -103,6 +109,5 @@
 }
         </pre>
     </div>
-
 </body>
 </html>
