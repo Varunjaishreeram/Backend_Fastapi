@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .endpoint {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 3px 5px;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the FastAPI Application</h1>
+    <p>You can test this API using Postman with the following endpoints:</p>
+    
+    <div class="endpoint">
+        <h3>1. Create a Student</h3>
+        <p><strong>POST:</strong> <code>/students</code></p>
+        <p><strong>Request Body:</strong></p>
+        <pre>
+{
+    "name": "Student 1",
+    "age": 25,
+    "address": {
+        "city": "New York",
+        "country": "USA"
+    }
+}
+        </pre>
+        <p><strong>Example Response:</strong></p>
+        <pre>
+{
+    "id": "603f1e4cfa0e9d44d87d3e2f"
+}
+        </pre>
+    </div>
+
+    <div class="endpoint">
+        <h3>2. Get All Students</h3>
+        <p><strong>GET:</strong> <code>/students</code></p>
+        <p><strong>Example Response:</strong></p>
+        <pre>
+{
+    "data": [
+        {
+            "name": "Student 1",
+            "age": 25,
+            "_id": "603f1e4cfa0e9d44d87d3e2f",
+            "address": {
+                "city": "New York",
+                "country": "USA"
+            }
+        }
+    ]
+}
+        </pre>
+    </div>
+
+    <div class="endpoint">
+        <h3>3. Update a Student</h3>
+        <p><strong>PATCH:</strong> <code>/students/{id}</code></p>
+        <p><strong>Request Body:</strong></p>
+        <pre>
+{
+    "age": 26
+}
+        </pre>
+        <p><strong>Example Response:</strong></p>
+        <pre>
+{
+    "detail": "Student updated successfully"
+}
+        </pre>
+    </div>
+
+    <div class="endpoint">
+        <h3>4. Delete a Student</h3>
+        <p><strong>DELETE:</strong> <code>/students/{id}</code></p>
+        <p><strong>Example Response:</strong></p>
+        <pre>
+{
+    "detail": "Student deleted successfully"
+}
+        </pre>
+    </div>
+
+</body>
+</html>
